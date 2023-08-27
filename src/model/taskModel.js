@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
-import database from '../database.js'
+import database from '../server/database.js'
 
-export default database.define('task', {
+const taskModel = database.define('task', {
     id: {
         type: Sequelize.INTEGER.UNSIGNED,
         primaryKey: true,
@@ -18,3 +18,5 @@ export default database.define('task', {
         unique: true,
     },
 });
+
+export default taskModel;
