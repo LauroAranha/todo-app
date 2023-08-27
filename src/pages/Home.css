@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    height: 10vh;
+}
+
+.app-title {
+    margin: auto;
+    vertical-align: middle;
+}
+
+.task-board {
+    margin: auto;
+    width: 60vw;
+    height: 100%;
+}
