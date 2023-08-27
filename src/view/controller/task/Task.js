@@ -1,7 +1,7 @@
 import React from 'react'; // Import React
 import PropTypes from 'prop-types';
-import DeleteButton from '../button/deleteButton/DeleteButton';
-import EditButton from '../button/editButton/EditButton';
+import DeleteButton from '../button/deleteButton/DeleteButton.js';
+import EditButton from '../button/editButton/EditButton.js';
 import './Task.css';
 
 const Task = ({ id, title }) => {

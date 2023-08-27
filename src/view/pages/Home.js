@@ -1,7 +1,7 @@
 import './Home.css'
 
-import Input from '../components/input/Input';
-import Task from '../components/task/Task';
+import Input from '../controller/input/Input.js';
+import Task from '../controller/task/Task.js';
 
 const Home = () => {
     const mockTaskData = [
