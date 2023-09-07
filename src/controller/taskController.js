@@ -12,10 +12,10 @@ async function findAll(req, res) {
 }
 
 function addTask(req, res) {
+    const { title } = req.body;
     try {
         const tasks = taskModel.create({
-            title: req.body.title,
-            description: req.body.description,
+            title: title
         });
 
         res.json(tasks);
