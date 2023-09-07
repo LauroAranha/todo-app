@@ -1,24 +1,22 @@
-import React from 'react'; // Import React
+import React from 'react';
 import PropTypes from 'prop-types';
-import DeleteButton from '../button/deleteButton/DeleteButton.js';
-import EditButton from '../button/editButton/EditButton.js';
 import './Task.css';
 
-const Task = ({ id, title }) => {
+const Task = ({ id, title, status }) => {
+    const taskClass = status === 'open' ? 'todo-task' : 'completed-task';
+
     return (
-        <div id={id} className="task-container">
+        <div id={`task-id-${id}`} className={`task-container ${taskClass}`}>
             <p className="task-title">{title}</p>
-            <div className='button-container'>
-                <EditButton />
-                <DeleteButton />
-            </div>
+            {status === 'open' && <div className='button-container'> <p className='edit-option'>edit</p> </div>}
         </div>
     );
 }
 
 Task.propTypes = {
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
+    id: PropTypes.number,
+    title: PropTypes.string,
+    status: PropTypes.oneOf(['open', 'closed'])
 }
 
 export default Task;
