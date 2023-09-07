@@ -20,7 +20,9 @@ function addTask(req, res) {
 
         res.json(tasks);
     } catch (error) {
-        res.status(500).json({ error: 'An error occurred while fetching tasks' });
+        res.status(500).json({ error: 'An error occurred while adding task' });
+    }
+}
     }
 }
 
