@@ -12,10 +12,10 @@ const taskModel = database.define('task', {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    description: {
+    status: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true,
+        defaultValue: 'open'
     },
 });
 
